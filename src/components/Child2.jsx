@@ -1,11 +1,15 @@
-import React from 'react'
-import { Child3 } from './Child3'
+import React, { useContext } from 'react'
+import { FirstContext } from '../FirstContent'
 
-export const Child2 = (props) => {
+
+export const Child2 = () => {
+
+  const {userName} = useContext(FirstContext)
+
   return (
     <section>
-        <div> Child Two </div>
-        <Child3 userName = {props.userName} />
+        <div>Child Two</div>
+        <div> {userName} </div>
     </section>
   )
 }

@@ -1,11 +1,11 @@
 import React from 'react'
-import { Child2 } from './Child2'
 
-export const Child1 = (props) => {
+
+export const Child1 = () => {
   return (
     <section>
         <div>Child One</div>
-        <Child2 userName = {props.userName} />
+        
     </section>
   )
 }

@@ -1,13 +1,17 @@
-import { useState } from "react";
 import { Child1 } from "./components/Child1";
+import { Child2 } from "./components/Child2";
+import { Child3 } from "./components/Child3";
+import FirstContextProvider from "./FirstContent";
 
 function App() {
-    const [username,setUsername] = useState("Shin")
-
+    
     return(
         <section>
-            <h1>Hello</h1>
-            <Child1 userName = {username} />
+            <FirstContextProvider>
+                <Child1 />
+                <Child2 />
+                <Child3 />
+            </FirstContextProvider>
         </section>
     )
 }
