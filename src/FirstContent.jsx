@@ -4,11 +4,13 @@ export const FirstContext = createContext(null);
 
 const FirstContextProvider = (props) =>{
 
-    const [userName,setUserName] = useState("Shin")
+    const userName = "Shin";
     const address = "YGN";
 
+    const [num, setNum] = useState(0);
+
     return(
-        <FirstContext.Provider value={{ userName,address }} >
+        <FirstContext.Provider value={{ userName,address, num, setNum }} >
             {props.children}
         </FirstContext.Provider>
     )
